@@ -12,12 +12,10 @@ class SearchBox extends Component {
             }),
         }).isRequired,
         placeholder: PropTypes.string,
-        onPlacesChanged: PropTypes.func,
     };
 
     static defaultProps = {
         placeholder: 'Search...',
-        onPlacesChanged: null,
     };
 
     constructor(props) {
@@ -98,14 +96,6 @@ class SearchBox extends Component {
     componentWillUnmount() {
         const { mapsapi: { event }, } = this.props;
         event.clearInstanceListeners(this.searchBox);
-    }
-
-    onPlacesChanged = () => {
-        const { onPlacesChanged } = this.props;
-
-        if (onPlacesChanged) {
-            onPlacesChanged(this.searchBox.getPlaces());
-        }
     }
 
     render() {
