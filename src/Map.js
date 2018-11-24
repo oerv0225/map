@@ -55,38 +55,3 @@ class Map extends Component {
 }
 
 export default Map;
-
-//          bootstrapURLKeys={{ key: 'AIzaSyBLAWATT96W6sZ50Nayn6D-kb2_Res2Fc' }}
-//              bootstrapURLKeys={{ key: 'AIzaSyBLAWATT96W6sZ50Nayn6D-kb2_Res2Fc', libraries: ['places', 'drawing'] }}
-/*
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-class Map extends Component {
-    static defaultProps = {
-        center: {
-            lat: 43.499329,
-            lng: -80.522703,
-        },
-        zoom: 17
-    };
-
-    render() {
-        return (
-            // Important! Always set the container height explicitly
-            <div style={{ height: '100vh', width: '100%' }}>
-              <GoogleMap
-                  defaultCenter={this.props.center}
-                  defaultZoom={this.props.zoom}
-              >
-                  <SearchBox
-                      onPlacesChanged={this.props.onPlacesChanged}
-                      inputPlaceholder="Customized your placeholder"
-                  />
-              </GoogleMap>
-            </div>
-        );
-    }
-}
-
-export default Map;
-*/
